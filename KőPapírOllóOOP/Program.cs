@@ -46,6 +46,7 @@ namespace KőPapírOllóOOP
                 Kpo kpo = new Kpo("Kő", "Olló");
                 kpo.SetEredmény();
                 Console.WriteLine("A játék eredménye: " + kpo.GetEredmény());
+                Console.ReadKey();
             }
         }
     }
