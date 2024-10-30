@@ -42,7 +42,7 @@ namespace VektorMinMaxOOP
 
         public (int, int) GetMin() => (min, minIndex);
         public (int, int) GetMax() => (max, maxIndex);
-
+        
         public (int, int)[] GetMinMax() => new[] { (min, minIndex), (max, maxIndex) };
     }
 
