@@ -3,19 +3,76 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace korhenger
+ 
+namespace KörHenger
 {
-    class Program
+    class Kör
     {
-        static void Main(string[] args)
+        protected double sugar,
+            terület,
+            kerület;
+ 
+        public Kör() { }
+ 
+        public Kör(double r)
         {
-            kor k1 = new kor();
-            k1.SetSugar(15);
-            k1.SetTerulet();
-            k1.SetKerulet();
-            Console.WriteLine($"A {k1.GetSugar()} sugarú kör kerülete:{k1.GetKerulet()},területe: {k1.GetTerulet()}.");
-            Console.ReadKey();
+            this.sugar = r;
         }
+ 
+        public void SetSugar(double r)
+        {
+            this.sugar = r;
+        }
+ 
+        public void SetTerület()
+        {
+            this.terület = Math.Round(Math.Pow(this.sugar, 2) * Math.PI, 2);
+        }
+ 
+        public void SetKerület()
+        {
+            this.kerület = Math.Round(2 * this.sugar * Math.PI, 2);
+        }
+ 
+        public double GetTerület()
+        {
+            return this.terület;
+        }
+ 
+        public double GetKerület()
+        {
+            return this.kerület;
+        }
+ 
+        public double GetSugár()
+        {
+            return this.sugar;
+        }
+    }
+ 
+    class Henger : Kör
+    {
+        // Osztályváltozók
+        private double térfogat,
+            magasság;
+ 
+        // Konstruktor
+        public Henger(double s, double m)
+        {
+            // Változók beállítása
+            this.sugar = s;
+            this.magasság = m;
+ 
+            // Számítások elvégzése
+            SetKerület();
+            SetTerület();
+            this.térfogat = this.terület * this.magasság;
+        }
+ 
+        public double GetTérfogat()
+        {
+            return this.térfogat;
+        }
+ 
     }
 }
