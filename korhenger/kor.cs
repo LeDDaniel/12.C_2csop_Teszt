@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace korhenger
 {
-    class kor
+    public class kor
     {
         private double sugar;
         private double terulet;
