@@ -1,78 +1,97 @@
 ﻿using System;
+
 using System.Collections.Generic;
+
 using System.Linq;
+
 using System.Text;
+
 using System.Threading.Tasks;
 
 namespace KörHenger
+
 {
-    class Kör
+
+    class Program
+
     {
-        protected double sugar,
-            terület,
-            kerület;
 
-        public Kör() { }
+        static void Main(string[] args)
 
-        public Kör(double r)
         {
-            this.sugar = r;
+
+            // 1. példány
+
+            Kör k1 = new Kör();
+
+            k1.SetSugar(15);
+
+            k1.SetTerület();
+
+            k1.SetKerület();
+
+            kiír(k1);
+
+            // 2. példány
+
+            Kör k2 = new Kör(58);
+
+            k2.SetKerület();
+
+            k2.SetTerület();
+
+            kiír(k2);
+
+            // 1. Henger
+            try
+            {
+                Henger h1 = new Henger(15, 34);
+                kiírHenger(h1);
+
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            catch(ArithmeticException e)
+            {
+                Console.WriteLine($"Hiba{e.Message}! .");
+            }
+            try
+            {
+                Henger h2 = new Henger(-1, 30);
+                kiírHenger(h2);
+
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+          
+
+
+
+            Console.ReadKey();
+
         }
 
-        public void SetSugar(double r)
+        private static void kiír(Kör k)
+
         {
-            this.sugar = r;
+
+            Console.WriteLine($"A {k.GetSugár()} sugarú kör kerülete: {k.GetKerület()}, területe: {k.GetTerület()}.");
+
         }
 
-        public void SetTerület()
+        private static void kiírHenger(Henger k)
+
         {
-            this.terület = Math.Round(Math.Pow(this.sugar, 2) * Math.PI, 2);
+
+            Console.WriteLine($"A {k.GetSugár()} sugarú henger kerülete: {k.GetKerület()}, területe: {k.GetTerület()}, térfogat: {k.GetTérfogat()}.");
+
         }
 
-        public void SetKerület()
-        {
-            this.kerület = Math.Round(2 * this.sugar * Math.PI, 2);
-        }
-
-        public double GetTerület()
-        {
-            return this.terület;
-        }
-
-        public double GetKerület()
-        {
-            return this.kerület;
-        }
-
-        public double GetSugár()
-        {
-            return this.sugar;
-        }
     }
 
-    class Henger : Kör
-    {
-        // Osztályváltozók
-        private double térfogat,
-            magasság;
-
-        // Konstruktor
-        public Henger(double s, double m)
-        {
-            // Változók beállítása
-            this.sugar = s;
-            this.magasság = m;
-
-            // Számítások elvégzése
-            SetKerület();
-            SetTerület();
-            this.térfogat = this.terület * this.magasság;
-        }
-
-        public double GetTérfogat()
-        {
-            return this.térfogat;
-        }
-
-    }
 }
