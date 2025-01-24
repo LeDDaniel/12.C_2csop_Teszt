@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "korhengert", "korhengert\ko
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtvaltOOP", "AtvaltOOP\AtvaltOOP.csproj", "{7CDB51EB-5011-4F27-BE8A-740BB8326F36}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtvaltOOP_UnitTest", "AtvaltOOP_UnitTest\AtvaltOOP_UnitTest.csproj", "{980C1791-ED0D-4B7C-B83F-4DB84EA0EFEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7CDB51EB-5011-4F27-BE8A-740BB8326F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7CDB51EB-5011-4F27-BE8A-740BB8326F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CDB51EB-5011-4F27-BE8A-740BB8326F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{980C1791-ED0D-4B7C-B83F-4DB84EA0EFEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{980C1791-ED0D-4B7C-B83F-4DB84EA0EFEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{980C1791-ED0D-4B7C-B83F-4DB84EA0EFEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{980C1791-ED0D-4B7C-B83F-4DB84EA0EFEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AtvaltOOP
 {
-    internal class Atvalt
+    public class Atvalt
     {
         //Osztályváltozók
         string eredmeny = string.Empty;
@@ -22,7 +22,7 @@ namespace AtvaltOOP
             else throw new FormatException("A megadott adat nem szám"); // .. hibás az adat
 
         }
-        private void decimalToBinarist(string szam)
+        private void decimalToBinaris(string szam)
         {
             //Az eljaras a 2-es maradekos osztas elve
             while (decSzam > 0)
@@ -32,7 +32,7 @@ namespace AtvaltOOP
             }
         }
 
-        private bool isDecimal(string szam)
+        public bool isDecimal(string szam)
         {
             // A decimálist úgy vizsgaljuk, hogy konvertálható-e
             bool eredm = true;
@@ -48,7 +48,7 @@ namespace AtvaltOOP
             return eredm;
 
         }
-        private void binarisToDecímalis(string szam)
+        private void binarisToDecimalis(string szam)
         {
             //Az eljárás a helyi és alaki értéki érték szorzata
             int j = 1;
@@ -58,7 +58,7 @@ namespace AtvaltOOP
                 j *= 2;
             }
         }
-        private bool isBinaris(string szam)
+        public  bool isBinaris(string szam)
         {
             bool eredm = true;
             if (szam[0] == '0') //  Mivel az elvárás szerint a binaris szám első karaktere 0!
